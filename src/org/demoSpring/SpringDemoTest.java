@@ -15,7 +15,7 @@ public class SpringDemoTest {
 	
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		SpringDemo s1 = (SpringDemo) context.getBean("spring");
-	s1.method();
+		s1.method();
 	}
 
 }
