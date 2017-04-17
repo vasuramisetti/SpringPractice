@@ -5,15 +5,26 @@
 
 <beans>
 
-<bean id ="spring" class="org.demoSpring.SpringDemo" > 
-
-  <!--  <constructor-arg type="java.lang.String" value="Sai" />
-  
-	 <constructor-arg type="int" value="25" />
- 
- -->
-  
- <constructor-arg index="0" value="vasudev" />
- <constructor-arg index="1" value="24" />
+<bean id="spring" class="org.demoSpring.SpringDemo">
+<property name="pointA" ref = "ZeroPoint"/>  
+<property name="pointB" ref = "Point2"/>
+<property name="pointC" ref = "Point3"/>
 </bean>
+
+<bean id="ZeroPoint" class="org.demoSpring.Point"> 
+<property name="x" value="0"/>
+<property name="y" value="0"/>
+</bean>
+
+<bean id="Point2" class="org.demoSpring.Point"> 
+<property name="x" value="0"/>
+<property name="y" value="-20"/>
+</bean>
+
+<bean id="Point3" class="org.demoSpring.Point"> 
+<property name="x" value="+20"/>
+<property name="y" value="0"/>
+</bean>
+
+
 </beans>

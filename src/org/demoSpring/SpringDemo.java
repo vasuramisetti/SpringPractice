@@ -2,46 +2,50 @@ package org.demoSpring;
 
 public class SpringDemo {
 	
-	private String name;
-	private int age;
+	private Point pointA;
+	private Point pointB;
+	private Point pointC;
 	
 	
-	public String getName() {
-		return this.name;
+	public Point getPointA() {
+		return pointA;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+
+	public void setPointA(Point pointA) {
+		this.pointA = pointA;
 	}
+
 	
-	
-	public int getAge() {
-		return this.age;
+	public Point getPointB() {
+		return pointB;
 	}
+
+
 	
-	
-	//constructors 
-	public SpringDemo(String name){
-		
-		this.name = name;
+	public void setPointB(Point pointB) {
+		this.pointB = pointB;
 	}
+
+
 	
-	public SpringDemo(int age){
-		
-		this.age = age;
+	public Point getPointC() {
+		return pointC;
 	}
+
+
 	
-	
-	public SpringDemo(String name,int age){
-		this.name= name;
-		this.age = age;
+	public void setPointC(Point pointC) {
+		this.pointC = pointC;
 	}
-	
-	
+
+
 
 	public void method(){
 		
-		System.out.println("Hello My name is::"+getName()+"\n" +"Age is::"+getAge());
+	System.out.println("Point A =("+getPointA().getX()+ "," +getPointA().getY() +")");
+	System.out.println("Point B = ("+getPointB().getX()+ "," +getPointB().getY() +")");
+	System.out.println("Point C = ("+getPointC().getX()+ "," +getPointC().getY()+ ")");
 	}
 
 }
