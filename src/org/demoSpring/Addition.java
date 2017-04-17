@@ -2,13 +2,22 @@ package org.demoSpring;
 
 public class Addition {
 	
-	int i=10;
-	int j=25;
-	int k = i+j;
+	private String name;
 	
+	
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
 	public void method(){
 		
-		System.out.println("Hello Spring, this is Addition::" + k);
+		System.out.println("Hello My name is:"+getName());
 	}
 
 }

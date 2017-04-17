@@ -5,6 +5,8 @@
 
 <beans>
 
-<bean id ="addition" class="org.demoSpring.Addition" /> 
+<bean id ="addition" class="org.demoSpring.Addition" > 
+<property name="name" value="vasudev"/>
 
+</bean>
 </beans>
