@@ -5,8 +5,8 @@
 
 <beans>
 
-<bean id ="addition" class="org.demoSpring.Addition" > 
-<property name="name" value="vasudev"/>
+<bean id ="spring" class="org.demoSpring.SpringDemo" > 
+<constructor-arg  value="vasudev"/>
 
 </bean>
 </beans>

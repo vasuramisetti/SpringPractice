@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.FileSystemResource;
 
-public class AdditionTest {
+public class SpringDemoTest {
 
 	public static void main(String[] args) {
 		//Triangle t1 = new Triangle();
@@ -14,8 +14,8 @@ public class AdditionTest {
 		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
 	
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		Addition a1 = (Addition) context.getBean("addition");
-	a1.method();
+		SpringDemo s1 = (SpringDemo) context.getBean("spring");
+	s1.method();
 	}
 
 }

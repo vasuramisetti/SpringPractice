@@ -1,6 +1,6 @@
 package org.demoSpring;
 
-public class Addition {
+public class SpringDemo {
 	
 	private String name;
 	
@@ -12,7 +12,12 @@ public class Addition {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
+	
+	public SpringDemo(String name){
+		
+		this.name = name;
+	}
 
 
 	public void method(){
