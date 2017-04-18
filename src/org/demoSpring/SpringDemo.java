@@ -1,16 +1,12 @@
 package org.demoSpring;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
 
-public class SpringDemo implements ApplicationContextAware, BeanNameAware{
+public class SpringDemo{
 	
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
-	private ApplicationContext Context = null;
+	
 	
 	public Point getPointA() {
 		return pointA;
@@ -54,19 +50,7 @@ public class SpringDemo implements ApplicationContextAware, BeanNameAware{
 	}
 
 
-	@Override
-	public void setApplicationContext(ApplicationContext Context) 
-	throws BeansException {
-	this.Context= Context;
-		
-	}
-
-
-	@Override
-	public void setBeanName(String BeanName) {
-		// TODO Auto-generated method stub
-		System.out.println("Bean name is ::"+BeanName);
-	}
+	
 	
 	
 

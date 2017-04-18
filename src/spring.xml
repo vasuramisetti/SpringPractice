@@ -5,9 +5,21 @@
 
 <beans>
 
-<bean id="spring" class="org.demoSpring.SpringDemo" autowire="byName">
+	<bean id="parentSpringDemo" class="org.demoSpring.SpringDemo" > 
+	<property name="pointA" ref="pointA" />
+	</bean>
 
-</bean>
+	<bean id="SpringDemo1" class="org.demoSpring.SpringDemo" parent="parentSpringDemo"> 
+	<property name="pointB" ref="pointB" />
+	<property name="pointC" ref="pointC" />
+	</bean>
+
+	<bean id="SpringDemo2" class="org.demoSpring.SpringDemo" parent="parentSpringDemo"> 
+	<property name="pointB" ref="pointB" />
+	</bean>
+
+
+
 
 <bean id="pointA" class="org.demoSpring.Point"> 
 <property name="x" value="0"/>
