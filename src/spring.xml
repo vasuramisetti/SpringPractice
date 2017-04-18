@@ -5,27 +5,21 @@
 
 <beans>
 
-<bean id="spring" class="org.demoSpring.SpringDemo">
-	<property name="points">
-	  <list>
-	  <ref bean="ZeroPoint"/>
-	  <ref bean="Point2"/>
-	  <ref bean="Point3"/>
-	  </list>
-	</property>
+<bean id="spring" class="org.demoSpring.SpringDemo" autowire="byName">
+
 </bean>
 
-<bean id="ZeroPoint" class="org.demoSpring.Point"> 
+<bean id="pointA" class="org.demoSpring.Point"> 
 <property name="x" value="0"/>
 <property name="y" value="0"/>
 </bean>
 
-<bean id="Point2" class="org.demoSpring.Point"> 
+<bean id="pointB" class="org.demoSpring.Point"> 
 <property name="x" value="0"/>
 <property name="y" value="-20"/>
 </bean>
 
-<bean id="Point3" class="org.demoSpring.Point"> 
+<bean id="pointC" class="org.demoSpring.Point"> 
 <property name="x" value="+20"/>
 <property name="y" value="0"/>
 </bean>
