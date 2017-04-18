@@ -6,23 +6,13 @@
 <beans>
 
 <bean id="spring" class="org.demoSpring.SpringDemo">
-<property name="pointA" ref = "ZeroPoint"/> 
-
- 
-<property name="pointB" >
-	<bean class="org.demoSpring.Point"> 
-	<property name="x" value="0"/>
-	<property name="y" value="-20"/>
-	</bean>
-</property>
-
-<property name="pointC">
-	<bean  class="org.demoSpring.Point"> 
-	<property name="x" value="+20"/>
-	<property name="y" value="0"/>
-	</bean>
-</property>
-
+	<property name="points">
+	  <list>
+	  <ref bean="ZeroPoint"/>
+	  <ref bean="Point2"/>
+	  <ref bean="Point3"/>
+	  </list>
+	</property>
 </bean>
 
 <bean id="ZeroPoint" class="org.demoSpring.Point"> 
@@ -30,8 +20,13 @@
 <property name="y" value="0"/>
 </bean>
 
-<alias name="spring" alias="spring-alias"></alias>
+<bean id="Point2" class="org.demoSpring.Point"> 
+<property name="x" value="0"/>
+<property name="y" value="-20"/>
+</bean>
 
-
-
+<bean id="Point3" class="org.demoSpring.Point"> 
+<property name="x" value="+20"/>
+<property name="y" value="0"/>
+</bean>
 </beans>

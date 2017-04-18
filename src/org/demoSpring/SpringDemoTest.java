@@ -14,7 +14,7 @@ public class SpringDemoTest {
 		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
 	
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		SpringDemo s1 = (SpringDemo) context.getBean("spring-alias");
+		SpringDemo s1 = (SpringDemo) context.getBean("spring");
 		s1.method();
 	}
 
